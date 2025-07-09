@@ -2,124 +2,133 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us | Sprout Café</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sprout | Plant Café in Exeter</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --lemon-yellow: #F2F0AD;
+      --pea-green: #196E33;
+      --dark-turquoise: #32848C;
+      --orange: #F5A14C;
+      --nut-brown: #946E14;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Outfit', sans-serif;
       margin: 0;
-      padding: 0;
-      background: #fff;
+      font-family: 'Outfit', sans-serif;
+      background: white;
       color: #222;
+      line-height: 1.6;
     }
-    header, footer {
-      background: #F2F0AD;
-      padding: 2rem;
+
+    header {
+      background: var(--lemon-yellow);
       text-align: center;
+      padding: 4rem 2rem 2rem;
     }
+
+    header img {
+      max-width: 160px;
+      height: auto;
+    }
+
     h1 {
       font-family: 'Playfair Display', serif;
-      color: #196E33;
-      margin-bottom: 0.5rem;
+      font-size: 2.5rem;
+      color: var(--pea-green);
+      margin-top: 1rem;
     }
-    main {
-      max-width: 800px;
-      margin: auto;
+
+    section {
       padding: 2rem;
+      max-width: 900px;
+      margin: auto;
     }
-    form {
+
+    .philosophy {
       background: #f9f9f9;
+      border-left: 5px solid var(--orange);
       padding: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .hours, .location {
+      background: var(--dark-turquoise);
+      color: white;
+      margin-top: 2rem;
+      padding: 2rem;
       border-radius: 6px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
-    label {
-      display: block;
-      margin-top: 1rem;
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      background: var(--pea-green);
+      color: white;
     }
-    input, textarea {
-      width: 100%;
-      padding: 0.75rem;
-      margin-top: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    button {
-      margin-top: 1.5rem;
-      background: #196E33;
-      color: #fff;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      cursor: pointer;
-      border-radius: 4px;
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: var(--nut-brown);
       font-weight: 600;
     }
-    .hidden {
-      display: none;
-    }
-    .faq {
-      margin-top: 3rem;
-    }
-    .faq h2 {
-      color: #32848C;
-    }
-    .faq dt {
-      font-weight: 600;
+
+    nav {
       margin-top: 1rem;
     }
-    .faq dd {
-      margin-left: 0;
-      margin-bottom: 1rem;
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Get in Touch</h1>
-    <p>We’d love to hear from you</p>
+    <img src="Sprout%20Logo.svg" alt="Sprout logo" />
+    <h1>Plant-based café rooted in real, vibrant food</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#hours">Hours</a>
+      <a href="#location">Find Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
-  <main>
-    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="sprout-check">
-      <input type="hidden" name="form-name" value="contact" />
-      <p class="hidden">
-        <label>Don’t fill this out: <input name="sprout-check" /></label>
-      </p>
-      <label for="name">Your Name</label>
-      <input type="text" name="name" id="name" required>
+  <section id="about">
+    <h2>Welcome to Sprout</h2>
+    <p>Sprout is a small but spirited café tucked away in the heart of Exeter’s Cathedral Yard. We serve colourful, wholesome, plant-based meals inspired by the seasons. Our food is full of flavour, thoughtfully prepared, and open to all — whether you eat plant-based every day or just fancy something fresh.</p>
 
-      <label for="email">Your Email</label>
-      <input type="email" name="email" id="email" required>
+    <div class="philosophy">
+      <strong>We don’t have a set menu.</strong> Our food changes with what’s good and fresh at the time — meaning no two visits are ever quite the same. Come by and see what’s on offer today.
+    </div>
+  </section>
 
-      <label for="message">Message</label>
-      <textarea name="message" id="message" rows="6" required></textarea>
+  <section id="hours" class="hours">
+    <h2>Opening Hours</h2>
+    <ul>
+      <li>Monday – Friday: 8am – 4pm</li>
+      <li>Saturday: 9am – 5pm</li>
+      <li>Sunday: Closed</li>
+    </ul>
+  </section>
 
-      <button type="submit">Send Message</button>
-    </form>
-
-    <section class="faq">
-      <h2>FAQs</h2>
-      <dl>
-        <dt>Do you take bookings?</dt>
-        <dd>Nope — just pop in! We keep things casual and cosy.</dd>
-
-        <dt>Is everything plant-based?</dt>
-        <dd>Yes! All our food and drink is thoughtfully made using only plant-based ingredients.</dd>
-
-        <dt>Are dogs allowed?</dt>
-        <dd>Absolutely — well-behaved dogs (and humans) are always welcome.</dd>
-
-        <dt>Can I bring my laptop?</dt>
-        <dd>We’re laptop-friendly, but during busy times we may limit use to keep space available for all.</dd>
-      </dl>
-    </section>
-  </main>
+  <section id="location" class="location">
+    <h2>Find Us</h2>
+    <p>1 Cathedral Yard, Exeter EX1 1HJ</p>
+    <iframe src="https://www.google.com/maps?q=1+Cathedral+Yard,+Exeter+EX1+1HJ&output=embed" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </section>
 
   <footer>
-    &copy; 2025 Sprout Café · 1 Cathedral Yard, Exeter EX1 1HJ
+    &copy; 2025 Sprout Café. Rooted in a love for real, vibrant food.
   </footer>
-
 </body>
 </html>
