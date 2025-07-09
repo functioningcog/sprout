@@ -99,6 +99,13 @@
       <button type="submit">Send Message</button>
     </form>
 
+    <!-- Netlify form detection -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name">
+      <input type="email" name="email">
+      <textarea name="message"></textarea>
+    </form>
+
     <section class="faq">
       <h2>FAQs</h2>
       <dl>
