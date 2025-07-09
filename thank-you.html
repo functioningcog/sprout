@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Thank You | Sprout Café</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
@@ -13,15 +13,29 @@
       background: #fff;
       color: #222;
     }
-    header, footer {
+    header {
       background: #F2F0AD;
-      padding: 2rem;
       text-align: center;
+      padding: 4rem 2rem 2rem;
+    }
+    header img {
+      max-width: 160px;
+      height: auto;
     }
     h1 {
       font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
       color: #196E33;
-      margin-bottom: 0.5rem;
+      margin-top: 1rem;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #946E14;
+      font-weight: 600;
+    }
+    nav {
+      margin-top: 1rem;
     }
     main {
       max-width: 800px;
@@ -39,16 +53,31 @@
       margin-left: 0;
       margin-bottom: 1rem;
     }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      background: #196E33;
+      color: white;
+    }
   </style>
 </head>
 <body>
 
   <header>
+    <img src="Sprout Logo.svg" alt="Sprout logo" />
     <h1>Thanks for getting in touch!</h1>
-    <p>We’ll get back to you as soon as we can.</p>
+    <nav>
+      <a href="index.html#about">About</a>
+      <a href="index.html#hours">Hours</a>
+      <a href="index.html#location">Find Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
   <main>
+    <p>We’ll get back to you as soon as we can.</p>
+
     <section class="faq">
       <h2>FAQs</h2>
       <dl>
